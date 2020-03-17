@@ -1,5 +1,7 @@
 $("#button-1").on("click", function() {
     alert("I've been clicked!");
+    var valOf = 1;
+    $("#first-number").append(valOf)
   });
 $("#button-2").on("click", function() {
     alert("I've been clicked!");
@@ -49,3 +51,4 @@ $("#button-2").on("click", function() {
   $("#button-power").on("click", function() {
     alert("I've been clicked!");
   });
+  
