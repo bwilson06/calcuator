@@ -24,28 +24,57 @@ $('button').on("click",function(event){
     }
     else if(value.match("=")){
         console.log(value);
+        equalsFunction();
     }
     else if(value.match("clear")){
         console.log(value); 
+        clearDisplay()
     }
     else{
         console.log(value);
         operator = value
         opdisplay.text(operator)
     }
-})
-/*create functions for equals and clear
-//equals needs to run the math using the nums and operator, 
-and return the result to #result. 
-function equals (num1,num2,operator) {
-    var results = 0;
-    swtich statements operators = "- + *" 
-    case (operator === "+"){
-        results = parseint(num1) + parseint(num2):
-        ... ...
-        resultdisplay.text(results)
-    }
-    */
 
+    function equalsFunction() {
+        var results = 0;
+        switch (operator){
+        case "-":
+            results = parseInt(num1) - parseInt(num2)
+            resultdisplay.text(results)
+            break;
+        case "+":
+            results = parseInt(num1) + parseInt(num2)
+            resultdisplay.text(results)
+            break;
+        case "/":
+            results = parseInt(num1) / parseInt(num2)
+            resultdisplay.text(results)
+            break;
+        case "*":
+            results = parseInt(num1) * parseInt(num2)
+            resultdisplay.text(results)
+            break;
+        case "^":
+            results = Math.pow(num1, num2)
+            resultdisplay.text(results)
+            break;
+            default:
+            break;
+        
+        }
+    }
+
+    function clearDisplay(){
+        num1 = '';
+        num2 = '';
+        operator = '';
+        numdisplay1.text(num1)
+        numdisplay2.text(num2)
+        opdisplay.text(operator)
+        resultdisplay.text('')
+    };
+
+  });
 
 });

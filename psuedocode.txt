@@ -1,0 +1,4 @@
+1.User clicks numbers
+2.When the user clicks on the number, it displays on the screen on the      first-number section
+3.Then the user clicks operator, it displays on the screen on the operator section
+4.Then user clicks numbers, it displays on the second-number section
